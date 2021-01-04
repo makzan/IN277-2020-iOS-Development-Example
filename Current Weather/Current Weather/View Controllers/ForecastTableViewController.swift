@@ -37,32 +37,14 @@ class ForecastTableViewController: UITableViewController {
     }
     
     func fetchWeatherForecast() {
-        guard let url = URL(string: "https://dev.makzan.net/weather.json") else { return }
-
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            guard let data = data else { return }
+        WeatherService().fetchForecastWeather { (forecasts) in
+            self.forecasts = forecasts            
             
-            if error != nil {
-                print(error!)
-                return
+            // we need this to update UI View.
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
             }
-            
-            do {
-                let json = try JSONDecoder().decode(Forecast.self, from: data)
-                self.forecasts = json.forecasts
-                
-                print(self.forecasts)
-                
-                // we need this to update UI View.
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-                
-            } catch let error{
-                print("Fetch error.")
-                print(error)
-            }
-        }.resume()
+        }
     }
 
     // MARK: - Table view data source

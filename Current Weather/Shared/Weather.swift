@@ -30,6 +30,52 @@ struct WeatherService {
             }
         }.resume()
     }
+    public func fetchForecastWeather( completion: (([ForecastDay]) -> Void)? = nil) {
+        guard let url = URL(string: "https://dev.makzan.net/weather.json") else { return }
+
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            guard let data = data else { return }
+            
+            if error != nil {
+                print(error!)
+                return
+            }
+            
+            do {
+                let json = try JSONDecoder().decode(Forecast.self, from: data)
+                
+                completion?(json.forecasts)
+                
+            } catch let error{
+                print("Fetch error.")
+                print(error)
+            }
+        }.resume()
+    }
+    
+    public func fetchCitiesWeather( completion: (([CityWeather]) -> Void)? = nil) {
+        guard let url = URL(string: "https://dev.makzan.net/cities_weather.json") else { return }
+
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            guard let data = data else { return }
+            
+            if error != nil {
+                print(error!)
+                return
+            }
+            
+            do {
+                let json = try JSONDecoder().decode(CitiesWeather.self, from: data)
+                
+                completion?(json.cities)
+                
+            } catch let error{
+                print("Fetch error.")
+                print(error)
+            }
+        }.resume()
+    }
+    
 }
 
 struct Weather:Decodable {
@@ -54,6 +100,22 @@ struct ForecastDay:Decodable {
     var temperatureLow:String = ""
     var temperatureHigh:String = ""
     var description:String = ""
+}
+
+struct CitiesWeather:Decodable {
+    var cities: [CityWeather] = []
+}
+struct Coordinate:Decodable {
+    var latitude: Double
+    var longitude: Double
+}
+struct CityWeather:Decodable {
+    var cityName:String = ""
+    var date:String = ""
+    var temperatureLow:String = ""
+    var temperatureHigh:String = ""
+    var description:String = ""
+    var coordinate:Coordinate
 }
 
 struct StatusCode {

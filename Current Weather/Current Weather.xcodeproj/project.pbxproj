@@ -25,6 +25,7 @@
 		B27DB3DC25999B00005490E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B27DB3DB25999B00005490E3 /* Assets.xcassets */; };
 		B27DB3E025999B00005490E3 /* Weather WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B27DB3D225999AFE005490E3 /* Weather WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B27DB3E92599B1A0005490E3 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22ACDF4259345EA008F0332 /* Weather.swift */; };
+		B2F35F3925A2BF0800EA9F7D /* CitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F35F3825A2BF0800EA9F7D /* CitiesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		B27DB3D925999AFE005490E3 /* Weather_Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather_Widget.swift; sourceTree = "<group>"; };
 		B27DB3DB25999B00005490E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B27DB3DD25999B00005490E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2F35F3825A2BF0800EA9F7D /* CitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 				B22ACE0125934824008F0332 /* DetailViewController.swift */,
 				B2168784259975F7007DAE23 /* ForecastTableViewController.swift */,
 				B27DB3C9259994A9005490E3 /* AboutTableViewController.swift */,
+				B2F35F3825A2BF0800EA9F7D /* CitiesViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				B2140BA9258CA26100CC5D5C /* TodayViewController.swift in Sources */,
 				B22ACE0225934824008F0332 /* DetailViewController.swift in Sources */,
 				B27DB3CA259994A9005490E3 /* AboutTableViewController.swift in Sources */,
+				B2F35F3925A2BF0800EA9F7D /* CitiesViewController.swift in Sources */,
 				B2140BA5258CA26100CC5D5C /* AppDelegate.swift in Sources */,
 				B2140BA7258CA26100CC5D5C /* SceneDelegate.swift in Sources */,
 			);
