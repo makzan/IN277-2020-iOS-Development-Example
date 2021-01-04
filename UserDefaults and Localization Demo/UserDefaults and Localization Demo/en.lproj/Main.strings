@@ -1,0 +1,48 @@
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "95X-4f-yaG"; */
+"95X-4f-yaG.title" = "Home";
+
+/* Class = "UILabel"; text = "最新優惠"; ObjectID = "B7T-Ee-yVd"; */
+"B7T-Ee-yVd.text" = "What’s Hot";
+
+/* Class = "UINavigationItem"; title = "Setting"; ObjectID = "EK3-Js-bPN"; */
+"EK3-Js-bPN.title" = "Setting";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "GLD-tM-c3R"; */
+"GLD-tM-c3R.text" = "Title";
+
+/* Class = "UITableViewSection"; footerTitle = "Just a demo"; ObjectID = "InH-QJ-uZd"; */
+"InH-QJ-uZd.footerTitle" = "Just a demo";
+
+/* Class = "UITableViewSection"; headerTitle = "This view demonstrate a detail view"; ObjectID = "InH-QJ-uZd"; */
+"InH-QJ-uZd.headerTitle" = "This view demonstrate a detail view";
+
+/* Class = "UINavigationItem"; title = "Detail"; ObjectID = "S7b-b8-PDr"; */
+"S7b-b8-PDr.title" = "Detail";
+
+/* Class = "UILabel"; text = "我的帳號"; ObjectID = "XA1-cI-WRv"; */
+"XA1-cI-WRv.text" = "Account";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "f0i-Wi-aC9"; */
+"f0i-Wi-aC9.title" = "Item";
+
+/* Class = "UILabel"; text = "Demo"; ObjectID = "fDq-1D-6Al"; */
+"fDq-1D-6Al.text" = "Demo";
+
+/* Class = "UILabel"; text = "示範程序"; ObjectID = "gX9-wW-6qH"; */
+"gX9-wW-6qH.text" = "Demonstration";
+
+/* Class = "UITabBarItem"; title = "Setting"; ObjectID = "krH-Rf-8Mp"; */
+"krH-Rf-8Mp.title" = "Setting";
+
+/* Class = "UILabel"; text = "掃一掃"; ObjectID = "lCT-Jy-FiO"; */
+"lCT-Jy-FiO.text" = "Scan QR";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "lQe-Ap-gZB"; */
+"lQe-Ap-gZB.title" = "Home";
+
+/* Class = "UINavigationItem"; title = "Home"; ObjectID = "ma2-iD-gF0"; */
+"ma2-iD-gF0.title" = "Home";
+
+/* Class = "UILabel"; text = "優惠劵"; ObjectID = "mva-2I-nLm"; */
+"mva-2I-nLm.text" = "Coupon";
