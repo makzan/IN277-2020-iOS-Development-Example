@@ -1,0 +1,90 @@
+<head>
+  <!-- Please make sure user-scalable=no is only used carefully -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <style>
+    
+    body {
+      font: -apple-system-body;
+      padding: 16px;
+      margin: 0;
+    }
+    footer {
+      font: -apple-system-footnote;
+    }
+    label {
+      display: block;
+      margin-bottom: 1em;
+    }
+    input {
+      display: block;
+      width: 100%;
+      padding: .5em;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+      font-size: inherit;
+    }
+  </style>
+</head>
+<body>
+  <h1>Demo</h1>
+  <form id="form" action="">
+    <label>Name:
+      <input type="text" id="name" name="name">
+    </label>
+    
+    <label>Home Tel:
+      <input type="tel" id="tel" name="tel">
+    </label>
+    
+    <label>Mobile Tel:
+      <input type="tel" id="mobile-tel" name="mobile-tel">
+    </label>
+    
+    <label>Income
+      <input type="number" id="income" pattern="[0-9]*" name="income">
+    </label>
+    
+    <label>
+      <input type="button" id="send-back" value="Send back to iOS">
+    </label>
+    
+  </form>
+  
+  <p>Debug: <span id="preferredContentSizeCategory"></span></p>
+  
+  <footer>Footer placeholder.</footer>
+  
+  <script src="https://code.jquery.com/jquery.min.js"></script>
+  <script>
+    // document.write(window.navigator.userAgent);
+    
+    let userAgent = window.navigator.userAgent;
+    
+    if (userAgent.indexOf("Demo App iOS") >= 0) {
+      $("h1").hide();
+    }
+    
+    function fillInForm(name, tel, mobileTel) {
+      $("#name").val(name);
+      $("#tel").val(tel);
+      $("#mobile-tel").val(mobileTel);  
+      return "Form filled by JavaScript."
+    }
+    
+    function setAccessibilityFontSize(size) {
+      $("#preferredContentSizeCategory").text(size);
+    }
+    
+    $("#send-back").on('click', function(){
+      var data = {
+        'name': $("#name").val(),
+        'tel': $("#tel").val(),
+        'mobileTel': $("#mobile-tel").val(),
+        'income': $("#income").val()
+      }
+      
+      // The "notification" has to match the name of userContentController in Swift.
+      window.webkit.messageHandlers.notification.postMessage({ hello: "world from web/JS", data: data} );
+    });
+  </script>
+</body>
